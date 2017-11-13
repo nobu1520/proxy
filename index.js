@@ -3,7 +3,7 @@ const request = require('request');
 
 http.createServer((req, res) => {
   //res.setHeader('Host', 'google.fr');
-  const website = 'deezer.com';
+  const website = 'google.fr';
   const target = req.url === '/' ? website : `${website}/${req.url}`;
   res.setHeader('Content-Type', 'text/html;charset=utf8');
 
