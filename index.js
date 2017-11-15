@@ -11,8 +11,6 @@ http.createServer((req, res) => {
   
   if (websiteOptionFromUrl !== req.url) {
     currentWebsite = websiteOptionFromUrl;
-  } else {
-    currentWebsite = defaultWebsite;
   }
 
   const target = req.url === '/' || req.url.startsWith('/foxy/') ? currentWebsite : `${currentWebsite}${req.url}`;
